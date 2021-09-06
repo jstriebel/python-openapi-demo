@@ -7,11 +7,13 @@ Demo Project showcasing OpenAPI usage in Python via [FastAPI](https://fastapi.ti
 * Start the server: `poetry run uvicorn main:app --reload`
   and explore http://127.0.0.1:8000
 * Inspect the REST API via their auto-generated docs:
-  http://127.0.0.1:8000/docs
-  http://127.0.0.1:8000/redoc
+  * http://127.0.0.1:8000/docs
+  * http://127.0.0.1:8000/redoc
 * Auto-test the (still running) server against its schema, using
-  `poetry run schemathesis run http://127.0.0.1:8000/openapi.json`
-  and fix the mistake it found if you like (see `main.py` line 50)
+  ```bash
+  poetry run schemathesis run http://127.0.0.1:8000/openapi.json
+  ```
+  and fix the mistake it found if you like (see `main.py` line 50).
 * Generate a Python client from the server's OpenAPI definitions and try it out:
   ```bash
   poetry run openapi-python-client generate --url http://127.0.0.1:8000/openapi.json
