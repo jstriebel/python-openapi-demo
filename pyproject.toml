@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "openapi-demo"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+fastapi = {extras = ["standard"], version = "^0.68.1"}
+uvicorn = "^0.15.0"
+pydantic = {extras = ["email"], version = "^1.8.2"}
+
+[tool.poetry.dev-dependencies]
+black = "^21.8b0"
+isort = "^5.9.3"
+openapi-python-client = "^0.10.4"
+schemathesis = "^3.9.7"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
